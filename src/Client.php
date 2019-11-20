@@ -61,7 +61,7 @@ class Client
 
         curl_setopt($ch, CURLOPT_HTTPAUTH, TRUE);
         curl_setopt($ch, CURLOPT_HTTPHEADER, [
-            'Authorization: ' . base64_encode($logins),
+            'Authorization: Basic ' . base64_encode($logins),
             'Content-Type: application/json',
         ]);
         if (count($queryParameters) !== 0) {
